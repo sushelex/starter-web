@@ -1,0 +1,403 @@
+Section 2
+Lec 9
+Three stages of GIT
+Working Directory-code which we want to commit
+Staging Area-commited git changes but not pushed the changes, Pre commit holding area.
+Commit-
+Remote Repository-GITHUB
+Master Branch
+
+Lec 10
+Need of version control system-
+Benefits-
+Saves from creating multiple backups of files.
+Allows multiple people to work on same file.
+Tracks changes and also who have made those changes.
+Easy to switch back to older versions as and when required.
+Makes you more productive.
+
+Version control is the mgmt of changes to documents, computer programs, large websites and other collection of information
+Centralized Version control system
+CVCS uses a central server to store all files.
+It works on a single repository to which users can directly access a central serve.
+Central server could be local or remote machine directly connected to each of the programmer’s workstation.
+Drawbacks of CVCS-
+
+Distributed Version Control System
+
+Every contributor has a local copy or “clone” of the main repository.
+Developer can update their local repositories with new data from the central server by an operation called “pull” and after changes to the main repository by an operation called “push” from their local repository.
+
+Section 3 Lec 13
+sushilkumargupta$ git config --global user.name "sushil, gupta";
+git config --global user.email "sushelex@gmail.com"
+
+This will save the changes in git config file
+
+git config --list
+Can refer above command to get the information related to configuration and can be changed by using command git config --global <parameter> <value> 
+
+git help <command need to get help>
+The above git command help to get the details of command 
+
+Lec 14
+Create git repository
+git init
+
+Lec 15
+First git commit
+Git status
+It will verify the changes in the given git
+
+When have any untracked files, will get below message:
+sushils-MacBook-Air:peter sushilkumargupta$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	response.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+sushils-MacBook-Air:peter sushilkumargupta$ /Users/sushilkumargupta/Desktop/response.html 
+
+Once add the changes by using add  command, get the below message-
+sushils-MacBook-Air:peter sushilkumargupta$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   response.html
+Can commit the changes by using git commit -m “<meaningful message>”
+sushils-MacBook-Air:peter sushilkumargupta$ git commit -m "first commit"
+[master (root-commit) a92c057] first commit
+ 1 file changed, 101 insertions(+)
+ create mode 100644 response.html
+
+IF any file is updated but not added to git project then below status will show
+sushils-MacBook-Air:peter sushilkumargupta$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   response.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+But when we add the changes into git project and check the status, then below message will be displayed and it say that file is modified
+sushils-MacBook-Air:peter sushilkumargupta$ git add *
+sushils-MacBook-Air:peter sushilkumargupta$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	modified:   response.html
+
+Lec 16
+Adding files and Commit GIT Logs
+
+sushils-MacBook-Air:lec16 sushilkumargupta$ git log
+commit a0f8cc050d62921ec49a0caeeb433c514519a91d (HEAD -> master)
+Author: sushil, gupta <sushelex@gmail.com>
+Date:   Mon Feb 25 23:19:34 2019 +0530
+
+    second commit
+
+commit 288a95af2666261708f596ff6d3724d5ad0030f3
+Author: sushil, gupta <sushelex@gmail.com>
+Date:   Mon Feb 25 23:14:17 2019 +0530
+
+    commiting changes
+
+How to see commit of specific author
+sushils-MacBook-Air:lec16 sushilkumargupta$ git log --author="sushil, gupta"
+commit a0f8cc050d62921ec49a0caeeb433c514519a91d (HEAD -> master)
+Author: sushil, gupta <sushelex@gmail.com>
+Date:   Mon Feb 25 23:19:34 2019 +0530
+
+    second commit
+
+commit 288a95af2666261708f596ff6d3724d5ad0030f3
+Author: sushil, gupta <sushelex@gmail.com>
+Date:   Mon Feb 25 23:14:17 2019 +0530
+
+    commiting changes
+
+Lec 17
+GIT WorkFlow
+Three areas in git
+Working area
+Staging area
+Repository
+
+Working area
+A place where we perform day to day activity like coding, a place in computer where we maintain a repository
+
+Staging area
+When add a file using command git add <file name>, then file will be added into staging area
+
+Repository area 
+When we commit our add then file will be moved into Repository area
+
+
+Section 4
+Lec 18:: GIT Text Editor OverView
+
+Lec 19::GIT editor for Linux
+Lec 20: 
+
+Lec 21: Notepad++ as GIT editor in Windows
+
+Section: 5
+Lec 22 : Verify changes in GIT
+
+
+Section: 6
+24. Compare Stage Area with Local
+Repository in GIT
+5min
+
+25. Delete File in GIT
+4min
+
+When add file into staging area and then remove the file, still that file will show in the staging area until we add the changes into staging area
+
+(base) sushils-MacBook-Air:section6 sushilkumargupta$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	test1.txt
+	test3.txt
+	text1.txt
+	text2.txt
+
+(base) sushils-MacBook-Air:section6 sushilkumargupta$ git add *
+(base) sushils-MacBook-Air:section6 sushilkumargupta$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   test1.txt
+	new file:   test3.txt
+	new file:   text1.txt
+	new file:   text2.txt
+
+…
+…
+…
+Section 7: GIT with GITHUB **Advance**
+0 / 5|1hr 3min
+
+26. Explore Git with GITHub
+8min
+
+Github is a repository hosting service
+Github is a central repository
+Github is code hosting repository
+
+27. Create Centralized Repository
+18min
+How to synch folder with git repository
+First initialize the git into folder as git repository
+sushils-MacBook-Air:myrepo sushilkumargupta$ git init
+
+Add the remote git repository to the folder
+git init
+myrepo sushilkumargupta$ git remote add origin "git@github.com:sushelex/fmcg.git"
+
+git add pingpong.txt
+git commit -m “first commit”
+git push origin master
+
+
+
+
+28. Create Branches in GIT
+18min
+Create new branch - git branch <branch name>
+Change the branch - git checkout ‘develop’
+
+To check the available branches - git branch
+
+Check the files availbale in a branch -
+$ git ls-tree -r --name-only develop
+pingpong.txt
+swagg
+
+
+(base) sushils-MacBook-Air:myrepo sushilkumargupta$ git add *
+(base) sushils-MacBook-Air:myrepo sushilkumargupta$ git status
+On branch develop
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   halfman.txt
+	modified:   swagg
+	new file:   zing.txt
+
+(base) sushils-MacBook-Air:myrepo sushilkumargupta$ git commit -m "adding files into develop barnch"
+[develop 51b9106] adding files into develop barnch
+ 3 files changed, 8 insertions(+)
+ create mode 100644 halfman.txt
+ create mode 100644 zing.txt
+(base) sushils-MacBook-Air:myrepo sushilkumargupta$ git ls-tree -r --name-only develop
+halfman.txt
+pingpong.txt
+swagg
+zing.txt
+
+As here files are commited only for develop branch hence same files will not be available for master branch
+
+(base) sushils-MacBook-Air:myrepo sushilkumargupta$ git checkout master
+Switched to branch 'master'
+(base) sushils-MacBook-Air:myrepo sushilkumargupta$ git branch
+  develop
+* master
+
+(base) sushils-MacBook-Air:myrepo sushilkumargupta$ git ls-tree --name-only master
+pingpong.txt
+swagg
+
+
+
+
+29. Merge Branches in GIT
+12min
+
+
+
+
+
+Pushing changes to develop branch
+(base) sushils-MacBook-Air:myrepo sushilkumargupta$ git push origin develop
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (5/5), 448 bytes | 448.00 KiB/s, done.
+Total 5 (delta 0), reused 0 (delta 0)
+remote: 
+remote: Create a pull request for 'develop' on GitHub by visiting:
+remote:      https://github.com/sushelex/fmcg/pull/new/develop
+remote: 
+To https://github.com/sushelex/fmcg.git
+ * [new branch]      develop -> develop
+
+
+
+Merging the develop branch into master
+First checkout the branch where we want to marge the changes
+Then user command git merge <branch which is required to merge>
+
+(base) sushils-MacBook-Air:myrepo sushilkumargupta$ git merge develop
+Updating 25e7f62..51b9106
+Fast-forward
+ halfman.txt | 2 ++
+ swagg       | 1 +
+ zing.txt    | 5 +++++
+ 3 files changed, 8 insertions(+)
+ create mode 100644 halfman.txt
+ create mode 100644 zing.txt
+
+after merging develop into master but without pushing changes into github
+
+
+After pushing changes
+
+
+
+
+
+30. Revert a Commit in GIT
+moving the files from staging area to working area(git command: git reset head wokingtoStagingtoWorking.txt)
+(base) sushils-MacBook-Air:myrepo sushilkumargupta$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	wokingtoStagingtoWorking.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+(base) sushils-MacBook-Air:myrepo sushilkumargupta$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   wokingtoStagingtoWorking.txt
+
+(base) sushils-MacBook-Air:myrepo sushilkumargupta$ git reset head wokingtoStagingtoWorking.txt
+
+(base) sushils-MacBook-Air:myrepo sushilkumargupta$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	wokingtoStagingtoWorking.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+To revert the latest commit from the local git repository, use below git command-
+
+git reset head~
+
+(base) sushils-MacBook-Air:myrepo sushilkumargupta$ git commit -m "wokingtoStagingtoWorking.txt remove from local git repo"
+[master ed19873] wokingtoStagingtoWorking.txt remove from local git repo
+ 1 file changed, 3 insertions(+)
+ create mode 100644 wokingtoStagingtoWorking.txt
+(base) sushils-MacBook-Air:myrepo sushilkumargupta$ git reset head~
+(base) sushils-MacBook-Air:myrepo sushilkumargupta$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	wokingtoStagingtoWorking.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+ 
+
+Section 8: GIT Basics **Through
+Explanation**
+1 / 9|1hr 29min
+31. Add GIT in Existing Project Part
+10min
+
+32. Fork GitHub Existing Project
+
+9min
+
+Fork the repository means create the target repository into your local repository
+
+33. Git CLI Complete Workflow
+11min
+Before pushing changes to git remote repository, user must pull the changes first becasue git’s branch may be ahead of you repository due to other user’s push of code
+
+
+34. Back-out GIT Changes
+8min
+35. Delete File in GIT
+9min
+36. Rename & Move File in GIT
+14min
+37. Find Commit, File History in GIT
+11min
+38. GIT Alias
+7min
+39. Exclude Unwanted Files in GIT
+11min
+
+
+
