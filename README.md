@@ -18,3 +18,4 @@ this content is not available only to staging area not to repo
 #trying auto merge
 try::1
 try::2
+READ ME::try::3
