@@ -2,7 +2,7 @@
 # Starter Web Repo
 #reabse to para branch
 This repository is for showing how Git and GitHub work
-
+#updating file when on para branch
 ## Purpose
 
 Sample website with plenty of files for demos
