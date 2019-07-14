@@ -1,3 +1,4 @@
+#stashing this data by using git stash command
 # humanstxt.org/
 # The humans responsible & technology colophon
 
