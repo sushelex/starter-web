@@ -1,3 +1,4 @@
+i
 Section 2
 Lec 9
 Three stages of GIT
@@ -6,6 +7,7 @@ Staging Area-commited git changes but not pushed the changes, Pre commit holding
 Commit-
 Remote Repository-GITHUB
 Master Branch
+Happy Hellowinee
 
 Lec 10
 Need of version control system-
