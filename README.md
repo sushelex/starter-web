@@ -15,7 +15,7 @@ this chnage is in my local repo file
 
 #comapring staging area with the last commit
 this content is not available only to staging area not to repo
-
+00000000000000
 
 #trying auto merge
 try::1
