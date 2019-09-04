@@ -14,9 +14,8 @@
     HTML5, CSS3
     jQuery, Modernizr
 
-#my update 1
 hi hello changes
-
+#mera challan 23000/-
 
 
 #try git branch merge and check whether it is working or not
